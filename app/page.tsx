@@ -1,65 +1,137 @@
+import styles from "./page.module.css";
 import Image from "next/image";
+import logo from "@/public/AIA.jpg"
 
-export default function Home() {
+export default function Page() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
+    <main className={styles.page}>
+      <div className={styles.wrapper}>
+
+        {/* HEADER */}
+        <header className={styles.header}>
+          <Image src={logo} width={100}></Image>
+          <h1 className={styles.logo}>AgustínIntelArt · IA</h1>
+        </header>
+
+        {/* HERO */}
+        <section className={styles.hero}>
+          <div>
+            <h2 className={styles.heroTitle}>
+              Automatizá tu negocio con Inteligencia Artificial
+            </h2>
+
+            <p className={styles.heroSubtitle}>
+              Bots y chatbots que responden por vos 24/7, ahorran tiempo y te ayudan a vender más sin contratar personal.
+            </p>
+
+            <ul className={styles.heroList}>
+              <li><span>›</span> Automatización de consultas</li>
+              <li><span>›</span> Recordatorios de pago</li>
+              <li><span>›</span> Integración con WhatsApp y tu web</li>
+            </ul>
+
             <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              href="https://wa.me/5492612388045?text=Hola%20Agust%C3%ADn"
+              className={styles.btnPrimary}
             >
-              Templates
-            </a>{" "}
-            or the{" "}
+              Hablar por WhatsApp
+            </a>
+
+            <a href="https://drive.google.com/file/d/1DDOPWEj90PHCrWbUlO9IB2KDtGGDnIkk/view?usp=sharing" className={styles.btnSecondary}>
+              Ver brochure PDF
+            </a>
+          </div>
+
+          <div className={styles.heroCard}>
+            <h3 className={styles.cardTitle}>Soluciones de IA</h3>
+            <p className={styles.cardText}>
+              Automatizaciones y ChatBots que trabajan por vos.
+            </p>
+
+            <ul className={styles.cardList}>
+              <li>• Respuestas inmediatas</li>
+              <li>• Ahorro de tiempo</li>
+              <li>• Más ventas</li>
+            </ul>
+
+            <p className={styles.cardText}>
+              Desde USD 400 + 2 meses gratis
+            </p>
+          </div>
+        </section>
+
+        {/* SERVICIOS */}
+        <section className={styles.section}>
+          <h2 className={styles.sectionTitle}>Servicios de IA para tu negocio</h2>
+
+          <div className={styles.servicesGrid}>
+
+            {/* Servicio 1 */}
+            <div className={styles.serviceCard}>
+              <div className={styles.serviceTag}>Bot de Telegram</div>
+              <div className={styles.serviceTitle}>Bot Automatizado</div>
+              <ul className={styles.serviceList}>
+                <li>Registra clientes</li>
+                <li>Guarda contactos</li>
+                <li>Envía recordatorios</li>
+              </ul>
+              <p className={styles.price}>USD 400 + chequeo mensual USD 40</p>
+            </div>
+
+            {/* Servicio 2 */}
+            <div className={styles.serviceCard}>
+              <div className={styles.serviceTag}>ChatBot + WhatsApp</div>
+              <div className={styles.serviceTitle}>ChatBot de atención</div>
+              <ul className={styles.serviceList}>
+                <li>Respuestas automáticas</li>
+                <li>Deriva a asesor humano</li>
+                <li>Funciona 24/7</li>
+              </ul>
+              <p className={styles.price}>USD 400 + chequeo mensual USD 40</p>
+            </div>
+
+            {/* Servicio 3 */}
+            <div className={styles.serviceCard}>
+              <div className={styles.serviceTag}>ChatBot Web</div>
+              <div className={styles.serviceTitle}>ChatBot para tu sitio</div>
+              <ul className={styles.serviceList}>
+                <li>Integrado en tu web</li>
+                <li>Respuestas en tiempo real</li>
+                <li>Mejora la conversión</li>
+              </ul>
+              <p className={styles.price}>USD 400 + chequeo mensual USD 40</p>
+            </div>
+
+          </div>
+
+          {/* CTA Final */}
+          <div className={styles.cta}>
+            <p>¿Querés ver una demo aplicada a tu negocio?</p>
             <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              href="https://wa.me/5492612388045"
+              className={styles.btnPrimary}
             >
-              Learning
-            </a>{" "}
-            center.
+              Quiero una demo gratis
+            </a>
+          </div>
+        </section>
+
+        {/* BROCHURE */}
+        <section id="brochure" className={styles.brochure}>
+          <h2 className={styles.brochureTitle}>Brochure en PDF</h2>
+          <p className={styles.brochureText}>
+            Descargá el brochure completo con todos los servicios.
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
           <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="https://drive.google.com/file/d/1DDOPWEj90PHCrWbUlO9IB2KDtGGDnIkk/view?usp=sharing"
+            className={styles.btnPrimary}
+            download
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
+            Descargar PDF
           </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+        </section>
+
+      </div>
+    </main>
   );
 }

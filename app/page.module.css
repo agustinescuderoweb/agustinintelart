@@ -1,0 +1,249 @@
+/* ===== GENERAL ===== */
+
+body, html {
+  margin: 0 !important;
+  padding: 0 !important;
+  background: #0f172a !important; /* el color que estás usando */
+}
+.page {
+  background: #0f172a;
+  padding-bottom: 80px;
+  font-family: system-ui, sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.wrapper {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 24px 16px 40px;
+}
+
+/* ===== HEADER ===== */
+.header {
+  padding: 24px 0 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.3);
+}
+
+.logo {
+  color: #60a5fa;
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.contact {
+  font-size: 0.9rem;
+  color: #9ca3af;
+}
+
+/* ===== HERO ===== */
+
+.sectionTitle {
+    color: white;
+}
+.hero {
+  padding: 40px 0 32px;
+  display: grid;
+  grid-template-columns: 2fr 1.3fr;
+  gap: 32px;
+  align-items: center;
+}
+
+.cta p {
+    color: white;
+}
+
+.brochureTitle {
+    color: white;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+}
+
+.heroTitle {
+  font-size: 2.4rem;
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 12px;
+  color: #f9fafb;
+}
+
+.heroSubtitle {
+  font-size: 1.05rem;
+  color: #cbd5f5;
+  margin-bottom: 16px;
+}
+
+.heroList {
+  list-style: none;
+  margin-bottom: 24px;
+}
+
+.heroList li {
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  color: #9ca3af;
+}
+.heroList li span {
+  color: #60a5fa;
+  margin-right: 6px;
+}
+
+/* ===== BOTONES ===== */
+.btnPrimary {
+  display: inline-block;
+  background: #2563eb;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.2s;
+  margin-right: 10px;
+}
+
+.btnPrimary:hover {
+  background: #1d4ed8;
+}
+
+.btnSecondary {
+  color: #9ca3af;
+  text-decoration: underline;
+}
+
+/* ===== TARJETA ===== */
+.heroCard {
+  background: linear-gradient(135deg, #1e293b, #020617);
+  padding: 20px;
+  border-radius: 18px;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+}
+
+.cardTitle {
+  text-transform: uppercase;
+  color: #9ca3af;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+.cardText {
+  color: #e5e7eb;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.cardList {
+  padding: 0px;
+}
+
+.cardList li {
+  list-style: none;
+  margin-bottom: 6px;
+  color: #cbd5e1;
+}
+
+/* ===== SERVICIOS ===== */
+.section {
+  border-top: 1px solid rgba(148, 163, 184, 0.2);
+  padding-top: 40px;
+}
+
+.sectionTitle {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+@media (max-width: 900px) {
+  .servicesGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .servicesGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.serviceCard {
+  background: #020617;
+  padding: 18px;
+  border-radius: 16px;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+}
+
+.serviceTag {
+  color: #60a5fa;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.serviceTitle {
+  color: #f9fafb;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.serviceList {
+  list-style: none;
+  color: #9ca3af;
+  margin-bottom: 10px;
+  padding: 0px;
+}
+
+.serviceList li {
+  margin-bottom: 4px;
+}
+
+.price {
+  color: #e5e7eb;
+  font-size: 0.9rem;
+}
+
+/* ===== CTA FINAL ===== */
+.cta {
+  text-align: center;
+  background: rgba(15, 23, 42, 0.8);
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid rgba(96, 165, 250, 0.4);
+}
+
+/* ===== BROCHURE ===== */
+.brochure {
+  padding-top: 40px;
+}
+
+.brochureTitle {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.brochureText {
+  color: #cbd5f5;
+  margin-bottom: 16px;
+}
+
