@@ -9,7 +9,7 @@ export default function Page() {
 
         {/* HEADER */}
         <header className={styles.header}>
-          <Image src={logo} width={100}></Image>
+          <Image src={logo} width={100} alt="logo"></Image>
           <h1 className={styles.logo}>AgustínIntelArt · IA</h1>
         </header>
 
