@@ -1,6 +1,8 @@
 import styles from "./page.module.css";
 import Image from "next/image";
 import logo from "@/public/AIA.jpg"
+import instagram from "@/public/instagram.png"
+import youtube from "@/public/youtube.png"
 
 export default function Page() {
   return (
@@ -9,8 +11,13 @@ export default function Page() {
 
         {/* HEADER */}
         <header className={styles.header}>
+          <div>
           <Image src={logo} width={100} alt="logo"></Image>
-          <h1 className={styles.logo}>AgustínIntelArt · IA</h1>
+          </div>
+          <div className={styles.icons}>
+          <a href="https://www.instagram.com/agustinintel.art/"><Image src={instagram} width={30} alt="instagram"></Image></a>
+          <a href="https://www.youtube.com/@agustinintelart"><Image src={youtube} width={30} alt="youtube"></Image></a>
+          </div>
         </header>
 
         {/* HERO */}
@@ -21,15 +28,16 @@ export default function Page() {
             </h2>
 
             <p className={styles.heroSubtitle}>
-              Bots y chatbots que responden por vos 24/7, ahorran tiempo y te ayudan a vender más sin contratar personal.
+              Chatbots que responden por vos 24/7, ahorran tiempo y te ayudan a vender más sin contratar personal.
             </p>
 
             <ul className={styles.heroList}>
               <li><span>›</span> Automatización de consultas</li>
-              <li><span>›</span> Recordatorios de pago</li>
-              <li><span>›</span> Integración con WhatsApp y tu web</li>
+              <li><span>›</span> Integración a Webs y Whatsaap</li>
+              <li><span>›</span> Integraciones a Google Sheets</li>
+              <li><span>›</span> Sistemas de Bases de datos</li>
             </ul>
-
+            <div className={styles.brochure}>
             <a
               href="https://wa.me/5492612388045?text=Hola%20Agust%C3%ADn"
               className={styles.btnPrimary}
@@ -37,15 +45,16 @@ export default function Page() {
               Hablar por WhatsApp
             </a>
 
-            <a href="https://drive.google.com/file/d/1DDOPWEj90PHCrWbUlO9IB2KDtGGDnIkk/view?usp=sharing" className={styles.btnSecondary}>
+            <a href="https://drive.google.com/file/d/1BJ6fctz1s7WoeHNAFHzusH1YSBPhIRuI/view?usp=sharing" className={styles.btnSecondary}>
               Ver brochure PDF
             </a>
+            </div>
           </div>
 
           <div className={styles.heroCard}>
             <h3 className={styles.cardTitle}>Soluciones de IA</h3>
             <p className={styles.cardText}>
-              Automatizaciones y ChatBots que trabajan por vos.
+              ChatBots Inteligentes que trabajan por vos.
             </p>
 
             <ul className={styles.cardList}>
@@ -55,7 +64,7 @@ export default function Page() {
             </ul>
 
             <p className={styles.cardText}>
-              Desde USD 400 + 2 meses gratis
+              Desde USD 400 + 1 meses gratis de soporte
             </p>
           </div>
         </section>
@@ -67,39 +76,43 @@ export default function Page() {
           <div className={styles.servicesGrid}>
 
             {/* Servicio 1 */}
-            <div className={styles.serviceCard}>
-              <div className={styles.serviceTag}>Bot de Telegram</div>
-              <div className={styles.serviceTitle}>Bot Automatizado</div>
-              <ul className={styles.serviceList}>
-                <li>Registra clientes</li>
-                <li>Guarda contactos</li>
-                <li>Envía recordatorios</li>
-              </ul>
-              <p className={styles.price}>USD 400 + chequeo mensual USD 40</p>
-            </div>
-
-            {/* Servicio 2 */}
-            <div className={styles.serviceCard}>
-              <div className={styles.serviceTag}>ChatBot + WhatsApp</div>
-              <div className={styles.serviceTitle}>ChatBot de atención</div>
+             <div className={styles.serviceCard}>
+              <div className={styles.serviceTag}>Plan Start</div>
+              <div className={styles.serviceTitle}>ChatBot + Whatsaap</div>
               <ul className={styles.serviceList}>
                 <li>Respuestas automáticas</li>
                 <li>Deriva a asesor humano</li>
                 <li>Funciona 24/7</li>
               </ul>
-              <p className={styles.price}>USD 400 + chequeo mensual USD 40</p>
+              <p className={styles.price}>USD 400 - (soporte mensual USD 40)</p>
+            </div>
+
+            
+
+            {/* Servicio 2 */}
+            <div className={styles.serviceCard}>
+              <div className={styles.serviceTag}>Plan Basic</div>
+              <div className={styles.serviceTitle}>ChatBot + Whatsaap + Google Sheet</div>
+              <ul className={styles.serviceList}>
+                <li>Respuestas automáticas</li>
+                <li>Deriva a asesor humano</li>
+                <li>Registra datos a Google Sheet</li>
+                <li>Funciona 24/7</li>
+              </ul>
+              <p className={styles.price}>USD 600 - (soporte mensual USD 60)</p>
             </div>
 
             {/* Servicio 3 */}
             <div className={styles.serviceCard}>
-              <div className={styles.serviceTag}>ChatBot Web</div>
-              <div className={styles.serviceTitle}>ChatBot para tu sitio</div>
+              <div className={styles.serviceTag}>Plan Pro</div>
+              <div className={styles.serviceTitle}>ChatBot + Base de datos</div>
               <ul className={styles.serviceList}>
                 <li>Integrado en tu web</li>
                 <li>Respuestas en tiempo real</li>
-                <li>Mejora la conversión</li>
+                <li>Registra Insight de Clientes</li>
+                <li>Sistema de Administración de datos</li>
               </ul>
-              <p className={styles.price}>USD 400 + chequeo mensual USD 40</p>
+              <p className={styles.price}>USD 1500 - (soporte mensual USD 150)</p>
             </div>
 
           </div>
@@ -123,7 +136,7 @@ export default function Page() {
             Descargá el brochure completo con todos los servicios.
           </p>
           <a
-            href="https://drive.google.com/file/d/1DDOPWEj90PHCrWbUlO9IB2KDtGGDnIkk/view?usp=sharing"
+            href="https://drive.google.com/file/d/1BJ6fctz1s7WoeHNAFHzusH1YSBPhIRuI/view?usp=sharing"
             className={styles.btnPrimary}
             download
           >
